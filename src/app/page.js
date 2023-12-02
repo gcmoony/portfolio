@@ -32,7 +32,7 @@ export default function Home() {
           </div>
 
           <div className='self-stretch outline outline-1 hidden lg:block'></div>
-          <CardHolder style='flex-1 flex flex-col gap-2'/>
+          <CardHolder style='flex-1 flex flex-col gap-2 min-w-full lg:min-w-fit '/>
 
         </div>
 
