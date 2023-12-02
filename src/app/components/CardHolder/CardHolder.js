@@ -33,7 +33,7 @@ export default function CardHolder({style}) {
   return (
     <div className={style}>
       {certs.map((cert, key) => {
-        return <a key={key} target="_blank" className="block rounded p-3 whitespace-nowrap bg-slate-300 hover:bg-slate-200" href={cert.link} >{cert.title}</a>
+        return <a key={key} target="_blank" className="block rounded p-3 bg-slate-300 hover:bg-blue-300" href={cert.link} >{cert.title}</a>
       })}
     </div>
   );
