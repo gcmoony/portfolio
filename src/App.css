@@ -1,0 +1,106 @@
+.App {
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+  padding: 1.4em;
+  line-height: 1.5;
+  gap: 1em;
+}
+
+#Home {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column
+}
+
+
+
+.section {
+}
+
+a {
+  opacity: 80%;
+}
+
+a:hover {
+  opacity: 100%;
+}
+
+.profile-pic {
+  width: 80%;
+  max-width: 250px;
+  display: block;
+  margin: 20px auto;
+}
+
+.email-button {
+  border: none;
+  background-color: inherit;
+  font: inherit;
+  cursor: pointer;
+  padding: 0;
+}
+
+.list-plain {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.list-plain li a {
+  color: #61dafb;
+  text-decoration: none;
+}
+
+.list-plain li li a {
+  display: block;
+  width: max-content;
+  margin: auto;
+  text-align: center;
+  
+}
+
+.list-plain a img {
+  display: block;
+  margin: auto;
+}
+
+.clicked {
+  transition: background-color 1s;
+}
+
+.clicked::after {
+  content:  " (Copied ✅)";
+}
+
+#Contact > .links{
+  display: flex;
+  justify-content: space-around;
+}
+
+#Contact a, #Contact button{
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+  text-align: center;
+}
+
+@media (min-width: 600px) {
+  #Home {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .profile-pic {
+    max-width: 600px;
+  }
+
+  .sub {
+    justify-content: space-evenly;
+    flex-direction: row;
+  }
+}
