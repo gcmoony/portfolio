@@ -1,0 +1,23 @@
+.contact a {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.contact a:hover {
+  background: rgba(197, 197, 197, 0.253);
+}
+
+.contact .container {
+  display: flex;
+  justify-content: center;
+  gap: 8rem;
+  margin-top: 2em;
+}
+
+.contact .card {
+  text-align: center;
+  position: relative;
+}

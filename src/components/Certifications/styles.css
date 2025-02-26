@@ -1,5 +1,5 @@
-.certifications {
-  
+.certifications a:hover {
+  background: rgba(197, 197, 197, 0.253);
 }
 
 .certifications a {

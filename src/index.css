@@ -12,15 +12,52 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
-  /* background-color: #282c34; */
-  
   min-height: 100vh;
   font-size: calc(10px + 1vmin);
-  /* color: white; */
   padding: 1em 3em;
   max-width: 1200px;
   margin: 0 auto;
+  background: rgb(28,31,62);
+background: radial-gradient(circle, rgba(28,31,62,1) 11%, rgba(28,31,52,1) 78%, rgba(11,28,52,1) 93%);
+  background-position: 50% 200px;
+  color: white;
+  /* animation: bgmove infinite ease 30s; */
+}
+
+@keyframes bgmove {
+  0% {
+    background-position: 0% 0%;
+  }
+  25% {
+    background-position: 50% 25%;
+  }
+
+  50% {
+    background-position: 150% 1000px;
+  }
+
+  75% {
+    background-position: 200% 5000px;
+  }
+
+  100% {
+    background-position: 0% 100%;
+  }
+  
+}
+
+p {
+  color: rgba(197, 197, 197, 0.753);
+}
+
+.App > * {
+  margin-bottom: 4em;
+}
+
+.App > * > h2 {
+  /* box-shadow: 0px .25em 0px -1px black; */
+  color: #89a4b4;
+  margin-bottom: .5em;
 }
 
 code {
