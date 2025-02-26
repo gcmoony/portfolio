@@ -1,0 +1,25 @@
+.About img {
+  border-radius: 100%;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+.About .left {
+  grid-column: 1 / 5;
+}
+
+.About {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  place-items: center;
+}
+
+
+.About .right {
+  grid-column: 5 / 9;
+  position: relative;
+}
+
+.About .right button {
+  outline: solid red 2px;
+}

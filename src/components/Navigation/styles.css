@@ -2,14 +2,12 @@
     display: flex;
     justify-content: space-between;
     font-weight: 700;
+    padding: 1em 0;
+    align-items: baseline;
 }
-
 .Nav-Links {
     display: flex;
     list-style-type: none;
-    padding: 0;
-    margin: 0;
-    gap: calc(20px + 2vmin);
 }
 
 .Nav-Links a {
@@ -20,4 +18,8 @@
 .Nav-Links a:hover {
     opacity: 70%;
     color: dodgerblue;
+}
+
+.Nav-Bar h1 {
+    font-size: x-large;
 }
