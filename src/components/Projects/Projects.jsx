@@ -1,13 +1,18 @@
 import "./styles.css"
+import { library } from "@fortawesome/fontawesome-svg-core"
+import { fas } from "@fortawesome/free-solid-svg-icons"
+import { fab } from "@fortawesome/free-brands-svg-icons"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+library.add(fab, fas)
+
 export default function Projects() {
   const projectData = [
     {
       title: "FileViewer",
-      description: `A desktop file-reading application. Currently used to preview Markdown files on the desktop without needing to upload files online or use a parser in a code editor. Provides the ability to quick-switch between recently opened files in the current session. Uses ${(
-        <a href='https://marked.js.org/'>Marked</a>
-      )} for Markdown parsing and ${(
-        <a href='https://github.com/cure53/DOMPurify'>DOMPurify</a>
-      )} for HTML sanitizing.`,
+      description: `A desktop file-reading application. Currently used to preview
+          markdown files on the desktop without needing to upload files online
+          or use a parser in a code editor. Provides the ability to quick-switch
+          between recently opened files in the current session. Uses Marked for markdown parsing and DOMPurify for HTML sanitizing.`,
       project_tags: ["Electron JS", "React", "JavaScript", "HTML / CSS"],
       project_repo: "https://github.com/gcmoony/fileviewer",
       project_live_link: null,
@@ -24,9 +29,7 @@ export default function Projects() {
     },
     {
       title: "Art Gallery",
-      description: `An online art browsing gallery using the ${(
-        <a href='https://api.artic.edu/docs/'>Art Institute of Chicago</a>
-      )} REST API to showcase available public artwork and tours.`,
+      description: `An online art browsing gallery using the Art Institute of Chicago REST API to showcase available public artwork and tours.`,
       project_tags: ["JavaScript", "HTML / CSS"],
       project_repo: "https://github.com/gcmoony/art-gallery",
       project_live_link: "https://gcmoony.github.io/art-gallery/",
@@ -34,17 +37,7 @@ export default function Projects() {
     },
     {
       title: "ほろよい - 90's Styled Web Design",
-      description: `A 90's inspired website submitted for the ${(
-        <a href='https://www.codedex.io/holiday-hackathon'>
-          Codedex 2024 Holiday Hackathon
-        </a>
-      )}. Based off of the drinks found at ${(
-        <a href='https://www.suntory.co.jp/rtd/horoyoi/'>
-          Suntory Horoyoi Drinks
-        </a>
-      )}, this is a website designed to replicate the playfulness and responsiveness (or lack there-of) of older websites. ${(
-        <em>NOTE: The website plays audio queues during interaction</em>
-      )}.`,
+      description: `A 90's inspired website submitted for the Codedex 2024 Holiday Hackathon. This website is based on the drinks found at Suntory Horoyoi Drinks and was designed to replicate the playfulness and responsiveness (or lack there-of) of older websites.`,
       project_tags: ["JavaScript", "HTML / CSS"],
       project_repo: "https://github.com/gcmoony/90s-website",
       project_live_link: "https://gcmoony.github.io/90s-website/",
@@ -52,29 +45,15 @@ export default function Projects() {
     },
     {
       title: "Markdown Previewer",
-      description: `An online text editor to practice writing markdown, paired with a live preview window to view the markdown in its final state. Uses ${(
-        <a href='https://marked.js.org/'>Marked</a>
-      )} for Markdown parsing, ${(
-        <a href='https://github.com/cure53/DOMPurify'>DOMPurify</a>
-      )} for HTML sanitizing, and ${(
-        <a href='https://highlightjs.org/'>highlight.js</a>
-      )} for code syntax highlighting.`,
+      description: `An online text editor to practice writing markdown, paired with a live preview window to view the markdown in its final state. Uses Marked for markdown parsing, DOMPurify for HTML sanitizing, and highlight.js for code syntax highlighting.`,
       project_tags: ["React", "JavaScript", "HTML / CSS"],
       project_repo: "https://github.com/gcmoony/react-markdown-preview",
       project_live_link: "https://gcmoony-reactmd.netlify.app/",
-      img_link: "./img/project_previews/md_preview_screen.png",
+      img_link: "./img/project_previews/mk_preview_screen.png",
     },
     {
       title: "Calculator App",
-      description: `A ${(
-        <a href='https://www.frontendmentor.io/?ref=challenge'>
-          Frontend Mentor
-        </a>
-      )} challenge submission of the ${(
-        <a href='https://www.frontendmentor.io/challenges/calculator-app-9lteq5N29'>
-          Calculator App Project
-        </a>
-      )}. The calculator has basic functions such as performing addition, subtraction, division, and multiplication. Additionally, there are three different color themes a user can choose from to style the calculator.`,
+      description: `A Frontend Mentor challenge submission of the Calculator App Project. The calculator has basic functions such as performing addition, subtraction, division, and multiplication. Additionally, there are three different color themes a user can choose from to style the calculator.`,
       project_tags: ["JavaScript", "HTML / CSS"],
       project_repo: "https://github.com/gcmoony/js-calculator",
       project_live_link: "https://gcmoony.github.io/js-calculator/",
@@ -92,11 +71,15 @@ export default function Projects() {
   ]
 
   return (
-    <div className='projects'>
+    <div
+      className='projects'
+      id='Projects'
+    >
       <h2>Projects</h2>
       <div className='container'>
         {projectData.map((project, index) => {
           return (
+            // The project cards
             <div
               className='card'
               key={index}
@@ -105,9 +88,28 @@ export default function Projects() {
                 src={project.img_link}
                 alt={`${project.title} preview image`}
               />
-              <div>
+              <div className='desc'>
                 <h3>{project.title}</h3>
                 <p>{project.description}</p>
+                <div>
+                  <a
+                    target='_blank'
+                    href={project.project_repo}
+                  >
+                    <FontAwesomeIcon icon={["fab", "github"]} />
+                    <span> GitHub</span>
+                  </a>
+                  <span> </span>
+                  {project.project_live_link && (
+                    <a
+                      target='_blank'
+                      href={project.project_live_link}
+                    >
+                      <FontAwesomeIcon icon={["fas", "globe"]} />
+                      <span> Live Demo</span>
+                    </a>
+                  )}
+                </div>
                 <ul>
                   {project.project_tags.map((projTag, tagIndex) => {
                     return <li key={tagIndex}>{projTag}</li>
