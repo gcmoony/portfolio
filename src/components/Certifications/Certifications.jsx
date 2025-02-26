@@ -34,7 +34,7 @@ export default function Certifications() {
       id='Certifications'
       className='certifications'
     >
-      <h2>IT Certified</h2>
+      <h2>Certifications</h2>
       <p>
         Along my career path, I've studied different topics in technology and
         IT. Check out some of the certificates I've earned.
