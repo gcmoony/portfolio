@@ -76,6 +76,7 @@ export default function Projects() {
       id='Projects'
     >
       <h2>Projects</h2>
+      <p>Take a look at some of my projects hosted on GitHub.</p>
       <div className='container'>
         {projectData.map((project, index) => {
           return (
