@@ -4,7 +4,7 @@ import "./styles.css"
 export default function About() {
   return (
     <div
-      id='Home'
+      id='About'
       className='About'
     >
       <div className='left'>
