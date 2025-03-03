@@ -64,3 +64,52 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+@media (max-width: 690px) {
+
+  .Nav-Bar {
+    text-align: center;
+    justify-content: center !important;
+    padding: 0;
+    margin: 0;
+    opacity: 75%;
+  }
+
+  .Nav-Bar ul {
+    display: none !important;
+    
+  }
+
+  .About {
+    display: flex !important;
+    flex-direction: column;
+  }
+
+  .About img {
+    max-width: 200px !important;
+    aspect-ratio: 1/1;
+  }
+
+  .contact-button {
+    
+    justify-self: end !important;
+    display: block !important;
+  }
+
+  .container, .container .card { 
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container ul {
+    flex-wrap: wrap;
+    justify-content: start !important;
+  }
+
+  .container .desc *  {
+    text-align: left !important;
+  }
+}
