@@ -8,6 +8,14 @@ library.add(fab, fas)
 export default function Projects() {
   const projectData = [
     {
+      title: "CookBook",
+      description: `A digital recipe book where you can store your own written recipes. I often found myself taking screenshots of recipes or constantly referring back to a video when I want to remake a recipe I've enjoyed. In this format, I can add my add and modify recipes as necessary. This gives me the freedom to take some creative variation, and easily save the changes I like.`,
+      project_tags: ["MongoDB", "React", "JavaScript", "Express", "Vite"],
+      project_repo: "https://github.com/gcmoony/cookbook",
+      project_live_link: null,
+      img_link: "./img/project_previews/cookbook-demo.gif",
+    },
+    {
       title: "FileViewer",
       description: `A desktop file-reading application. Currently used to preview
           markdown files on the desktop without needing to upload files online
@@ -87,13 +95,14 @@ export default function Projects() {
             >
               <img
                 src={project.img_link}
-                alt={`${project.title} preview image`}
+                alt={`${project.title} preview`}
               />
               <div className='desc'>
                 <h3>{project.title}</h3>
                 <p>{project.description}</p>
                 <div>
                   <a
+                    rel='noreferrer'
                     target='_blank'
                     href={project.project_repo}
                   >
@@ -103,6 +112,7 @@ export default function Projects() {
                   <span> </span>
                   {project.project_live_link && (
                     <a
+                      rel='noreferrer'
                       target='_blank'
                       href={project.project_live_link}
                     >
