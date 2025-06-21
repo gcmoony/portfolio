@@ -60,6 +60,7 @@ export default function Certifications() {
               <a
                 target='_blank'
                 rel='noreferrer'
+                aria-label={`Verify the ${cert.name} certification`}
                 href={cert.cred_link}
               ></a>
             </div>

@@ -7,6 +7,11 @@ import Certifications from "./components/Certifications/Certifications"
 function App() {
   return (
     <div className='App'>
+      <meta
+        name='description'
+        content={"The developer portfolio of George Cadel-Munoz"}
+      />
+      <title>GCMunoz - Software Developer</title>
       <Navigation />
       <About />
       <Projects />

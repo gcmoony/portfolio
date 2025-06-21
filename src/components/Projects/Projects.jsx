@@ -8,8 +8,24 @@ library.add(fab, fas)
 export default function Projects() {
   const projectData = [
     {
+      title: "What's For Dinner?",
+      description: `A frontend application to help you find a new recipe. It provides you the ability to find a new recipe to try while also allowing you to filter out attributes of a recipe you're not quite interested in.`,
+      project_tags: ["React", "JavaScript", "Vite", "CSS"],
+      project_repo: null,
+      project_live_link: "https://whats4dinner-gcm.netlify.app/",
+      img_link: "./img/project_previews/whats-4-dinner-demo.gif",
+    },
+    {
+      title: "Konnichiwa, Nihongo",
+      description: `An easy interactive way to study (Japanese language) flash cards. The app showcases two sets of flashcards and a gamified approach to studying by letting you submit an answer and receive a point for correctness.`,
+      project_tags: ["React", "JavaScript", "CSS"],
+      project_repo: null,
+      project_live_link: "https://japanese-flash-cards-gcm.netlify.app/",
+      img_link: "./img/project_previews/japanese-flash-cards-demo.gif",
+    },
+    {
       title: "CookBook",
-      description: `A digital recipe book where you can store your own written recipes. I often found myself taking screenshots of recipes or constantly referring back to a video when I want to remake a recipe I've enjoyed. In this format, I can add my add and modify recipes as necessary. This gives me the freedom to take some creative variation, and easily save the changes I like.`,
+      description: `A digital recipe book to store your written recipes. I often found myself taking screenshots of recipes or constantly referring to a video when I wanted to remake a recipe I enjoyed. In this format, I can add and modify recipes as necessary, giving me the freedom to take some creative variation and easily save the changes I like.`,
       project_tags: ["MongoDB", "React", "JavaScript", "Express", "Vite"],
       project_repo: "https://github.com/gcmoony/cookbook",
       project_live_link: null,
@@ -18,9 +34,8 @@ export default function Projects() {
     {
       title: "FileViewer",
       description: `A desktop file-reading application. Currently used to preview
-          markdown files on the desktop without needing to upload files online
-          or use a parser in a code editor. Provides the ability to quick-switch
-          between recently opened files in the current session. Uses Marked for markdown parsing and DOMPurify for HTML sanitizing.`,
+ markdown files on the desktop without uploading files online or using a parser in a code editor. It provides the ability to quick-switch
+ between recently opened files in the current session. Uses Marked for markdown parsing and DOMPurify for HTML sanitizing.`,
       project_tags: ["Electron JS", "React", "JavaScript", "HTML / CSS"],
       project_repo: "https://github.com/gcmoony/fileviewer",
       project_live_link: null,
@@ -29,7 +44,7 @@ export default function Projects() {
     {
       title: "Dog Breed Classifier",
       description:
-        "A supervised machine learning model trained on identifying the breed of a dog in a given image. Training data and outputs are limited to chihuahuas, rottweilers, and golden retrievers.",
+        "A supervised machine learning model trained on identifying a dog's breed in a given image. Training data and outputs are limited to chihuahuas, rottweilers, and golden retrievers.",
       project_tags: ["Python", "Jupyter Notebook", "sci-kit learn"],
       project_repo: "https://github.com/GCadel/dog_breed_classification",
       project_live_link: null,
@@ -70,7 +85,7 @@ export default function Projects() {
     {
       title: "To Do List",
       description:
-        "An online checklist application to help you track and mark the tasks you need to complete. Supports CRUD operations such as adding new tasks, modifying tasks, viewing created tasks, and deleting tasks. Utilizes the browser's local storage to maintain the checklist on the user's device for data persistence.",
+        "An online checklist application to help you track and mark the tasks you must complete. Supports CRUD operations such as adding new tasks, modifying tasks, viewing created tasks, and deleting tasks. Utilizes the browser's local storage to maintain the checklist on the user's device for data persistence.",
       project_tags: ["JavaScript", "Tailwind CSS", "HTML / CSS"],
       project_repo: "https://github.com/gcmoony/SimpleCrud",
       project_live_link: "https://gcmoony.github.io/SimpleCrud/",
@@ -101,14 +116,19 @@ export default function Projects() {
                 <h3>{project.title}</h3>
                 <p>{project.description}</p>
                 <div>
-                  <a
-                    rel='noreferrer'
-                    target='_blank'
-                    href={project.project_repo}
-                  >
-                    <FontAwesomeIcon icon={["fab", "github"]} />
-                    <span> GitHub</span>
-                  </a>
+                  {project.project_repo ? (
+                    <a
+                      rel='noreferrer'
+                      target='_blank'
+                      href={project.project_repo}
+                    >
+                      <FontAwesomeIcon icon={["fab", "github"]} />
+                      <span> GitHub</span>
+                    </a>
+                  ) : (
+                    ""
+                  )}
+
                   <span> </span>
                   {project.project_live_link && (
                     <a
