@@ -49,7 +49,11 @@ export default function Contact() {
               <a
                 target='_blank'
                 href={info.contact_link}
-              ></a>
+                rel='noreferrer'
+                style={{ color: "transparent" }}
+              >
+                {info.name}
+              </a>
             </div>
           )
         })}
