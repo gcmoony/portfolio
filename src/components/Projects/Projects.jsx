@@ -8,6 +8,14 @@ library.add(fab, fas)
 export default function Projects() {
   const projectData = [
     {
+      title: "Paper Exchange",
+      description: `A web app to help you identify current exchange rates for the different types of currencies in the world. Provides simple insights such as the strength of a currency to other currencies, a list of stronger and weaker currencies, as well as a conversion tool. Uses the Exchange API.`,
+      project_tags: ["React", "API", "CSS", "MUI"],
+      project_repo: null,
+      project_live_link: "https://paper-exchange.netlify.app/",
+      img_link: "./img/project_previews/paper-exchange-demo.gif",
+    },
+    {
       title: "What's For Dinner?",
       description: `A frontend application to help you find a new recipe. It provides you the ability to find a new recipe to try while also allowing you to filter out attributes of a recipe you're not quite interested in.`,
       project_tags: ["React", "JavaScript", "Vite", "CSS"],
