@@ -8,6 +8,14 @@ library.add(fab, fas)
 export default function Projects() {
   const projectData = [
     {
+      title: "Artic View",
+      description: `A dashboard to view some information provided by the  Art Institute of Chicago API, including statistics about the type of artworks available. Browse available artworks through the dashboard, which provides you the ability to search for pieces that are for public domain, date of creation, and some title keywords.`,
+      project_tags: ["React", "React Router", "JavaScript", "CSS", "MUI"],
+      project_repo: null,
+      project_live_link: "https://artic-dashboard-gcm.netlify.app/",
+      img_link: "./img/project_previews/art-gallery-dashboard-demo.gif",
+    },
+    {
       title: "Paper Exchange",
       description: `A web app to help you identify current exchange rates for the different types of currencies in the world. Provides simple insights such as the strength of a currency to other currencies, a list of stronger and weaker currencies, as well as a conversion tool. Uses the Exchange API.`,
       project_tags: ["React", "API", "CSS", "MUI"],
