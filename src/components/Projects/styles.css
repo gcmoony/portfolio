@@ -1,7 +1,7 @@
 .projects .container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(auto ,1fr);
+  grid-template-rows: repeat(auto, 1fr);
   margin-top: 2em;
 }
 
@@ -21,12 +21,13 @@
 }
 
 .projects .desc {
-  grid-column:  2 / 4;
+  grid-column: 2 / 4;
   place-content: center;
 }
 
 .projects ul {
   display: flex;
+  flex-wrap: wrap;
   list-style: none;
   gap: 1em;
 }
@@ -35,8 +36,9 @@
   background-color: rgba(0, 0, 0, 0.308);
   font-weight: 500;
   color: rgba(230, 212, 48, 0.719);
-  padding: .1em .2em;
+  padding: 0.1em 0.2em;
   border-radius: 5px;
+  white-space: nowrap;
 }
 
 .projects .card:nth-of-type(even) img {
@@ -50,7 +52,7 @@
 }
 
 .desc > *:not(:nth-child(4)) {
-  margin-bottom: .5em;
+  margin-bottom: 0.5em;
 }
 
 .projects .container .card:nth-of-type(even) * {
@@ -62,7 +64,6 @@
   color: rgb(67, 67, 243);
   display: inline-block;
   text-decoration: none;
-  
 }
 
 .projects a:hover {
@@ -71,5 +72,5 @@
 
 .projects span:not(a span) {
   display: inline-block;
-  margin: 0 .5em;
+  margin: 0 0.5em;
 }

@@ -8,6 +8,20 @@ library.add(fab, fas)
 export default function Projects() {
   const projectData = [
     {
+      title: "Castle Crashers Creator",
+      description: `An interactive character customizing experience based on the 2008 game Castle Crashers. Allows a user to build a party of characters, including the ability to  choose specific types of roles and weapon types.`,
+      project_tags: [
+        "React",
+        "React Router",
+        "Supabase",
+        "Tailwind",
+        "Netlify Functions",
+      ],
+      project_repo: null,
+      project_live_link: "https://ccc-gcm.netlify.app/",
+      img_link: "./img/project_previews/Castle-Crashers-Creator-demo.gif",
+    },
+    {
       title: "Artic View",
       description: `A dashboard to view some information provided by the  Art Institute of Chicago API, including statistics about the type of artworks available. Browse available artworks through the dashboard, which provides you the ability to search for pieces that are for public domain, date of creation, and some title keywords.`,
       project_tags: ["React", "React Router", "JavaScript", "CSS", "MUI"],
