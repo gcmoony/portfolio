@@ -8,6 +8,14 @@ library.add(fab, fas)
 export default function Projects() {
   const projectData = [
     {
+      title: "Beautiful Recipes",
+      description: `A recipe sharing forum that allows users to create and manage cooking recipes they post online. Provides authentication and new user sign-up capabilities, resulting in the ability to interact with other user recipes such as commenting and upvoting.`,
+      project_tags: ["React", "React Router", "Supabase", "CSS"],
+      project_repo: null,
+      project_live_link: "https://youtu.be/gSaksza18gE?feature=shared",
+      img_link: "./img/project_previews/Beautiful-Recipes-demo.gif",
+    },
+    {
       title: "Castle Crashers Creator",
       description: `An interactive character customizing experience based on the 2008 game Castle Crashers. Allows a user to build a party of characters, including the ability to  choose specific types of roles and weapon types.`,
       project_tags: [
