@@ -1,5 +1,6 @@
-import ContactButton from "../ContactButton/ContactButton"
-import "./styles.css"
+import ContactButton from "../ContactButton/ContactButton";
+import "./styles.css";
+import ProfilePic from "/me.jpg";
 
 export default function About() {
   return (
@@ -9,7 +10,7 @@ export default function About() {
     >
       <div className='left'>
         <img
-          src='./me.jpg'
+          src={ProfilePic}
           className='profile-pic'
           alt='George'
         />
@@ -28,5 +29,5 @@ export default function About() {
         <ContactButton />
       </div>
     </div>
-  )
+  );
 }

@@ -1,7 +1,8 @@
 .About img {
   border-radius: 100%;
-  max-width: 100%;
+  max-width: 500px;
   object-fit: cover;
+  aspect-ratio: 1;
 }
 
 .About .left {
@@ -13,7 +14,6 @@
   grid-template-columns: repeat(8, 1fr);
   place-items: center;
 }
-
 
 .About .right {
   grid-column: 5 / 9;
