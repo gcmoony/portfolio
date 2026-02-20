@@ -12,7 +12,7 @@ export default function About() {
         <img
           src={ProfilePic}
           className='profile-pic'
-          alt='George'
+          alt=''
         />
       </div>
       <div className='right'>
